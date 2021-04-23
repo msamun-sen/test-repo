@@ -1,0 +1,21 @@
+<form (ngSubmit)='onSubmit()' method="post">
+
+	<div class="form-group">
+	  <label class="control-label" for="name">First Name:</label>
+	  <input type="text" class="form-control" id="firstName" name="firstName" pattern="[A-Za-z0-9]+" required autofocus [(ngModel)] = "contactData.name">
+	</div>
+  
+	<div class="form-group">
+		<label class="control-label" for="name">E-mail:</label>
+		<input type="email" class="form-control" id="email" name="email" required autofocus [(ngModel)] = "contactData.email">
+	  </div>
+
+	<div class="form-group">
+	  <label class="control-label" for="description">Message:</label>
+	  <textarea class="form-control" id="description" name="description" rows="6" [(ngModel)] = "contactData.message"></textarea>
+	</div>
+   
+	<button class="btn btn-primary" type="submit">Create</button>
+  
+  </form>
+  
